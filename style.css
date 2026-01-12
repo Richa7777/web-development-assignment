@@ -1,3 +1,4 @@
+/* index */
 body {
     background-color:white;
     color: black;
@@ -28,7 +29,7 @@ main{
 
 .menulist {
     color: black;
-    margin: 20px;
+    margin: 30px;
     list-style: none;
     text-decoration: none;
     
@@ -57,8 +58,8 @@ main{
 main {
     flex: 1;
     display: flex;
-    justify-content: center;   /* horizontal center */
-    align-items: center;       /* vertical center */
+    justify-content: center;   
+    align-items: center;       
     text-align: center;
 }
 
@@ -68,4 +69,257 @@ footer {
     padding: 20px;
     font-size: 16px;
     color:black ;
+}
+
+/* project */
+.project {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    gap: 50px;
+}
+
+
+.project {
+    display: grid;
+    flex-direction: column;
+    align-items: flex-start;  
+    gap: 50px;
+    margin-left: 20px; 
+}
+
+.projectshape1 {
+    background-color: white;
+    height: 50px;
+    width: 260px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px gray;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+}
+
+.projectshape2 {
+    background-color: white;
+    height: 50px;
+    width: 260px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px gray;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+}
+
+.projectshape1:hover {
+    transform: translateY(-5px);
+}
+
+.projectshape2:hover {
+    transform: translateY(-5px);
+}
+
+.link:hover {
+    color: blue; 
+}
+
+h2 {
+    text-align: center;
+}
+
+.paragraph {
+    text-align: center;
+}
+
+fieldset {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 8px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form br {
+    display: none; 
+}
+
+form br + input,
+form br + textarea {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: 5px auto 15px auto;
+}
+
+input[type="Submit"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+footer {
+    margin-top: 40px;
+}
+
+
+
+
+
+/* mobile responsive */
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    /* NAVBAR */
+    .menu {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menuoptions {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .menulist {
+        margin: 10px 0;
+    }
+
+    /* MAIN SECTION */
+    main {
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+    }
+
+    /* PROFILE IMAGE */
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* PROJECT SECTION */
+    .project {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .projectshape1,
+    .projectshape2 {
+        width: 90%;
+        height: auto;
+        padding: 30px;
+        text-align: center;
+    }
+
+    /* FORMS */
+    fieldset {
+        width: 90%;
+        padding: 20px;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+    }
+
+    /* FOOTER */
+    footer {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+/*site report*/
+main.site-report {
+    display: block;
+    text-align: left;
+}
+
+/* make entry containers flex */
+.experience-entry,
+.design-entry,
+.validation-result,
+.video-entry,
+.conclusion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* headings full width */
+.experience-entry h3,
+.design-entry h3,
+.validation-result h3,
+.video-entry h3 {
+    width: 100%;
+}
+
+/* paragraphs side by side */
+.experience-entry p,
+.design-entry p,
+.validation-result p,
+.video-entry p,
+.conclusion p {
+    width: 45%;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+    .site-report {
+        padding: 20px 15px;
+    }
+    
+    .site-report h1 {
+        font-size: 2rem;
+    }
+    .report-section h2 {
+        font-size: 1.5rem;
+    }
+    
+   .experience-entry p,
+    .design-entry p,
+    .validation-result p,
+    .video-entry p,
+    .conclusion p {
+        width: 100%;
+    }
+}
+    
+    .screenshot-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .screenshot-container figure {
+        min-width: 100%;
+    }
+
+
+@media (max-width: 480px) {
+    .site-report h1 {
+        font-size: 1.8rem;
+    }
+    
+    .report-section h2 {
+        font-size: 1.3rem;
+    }
+   .experience-entry p,
+    .design-entry p,
+    .validation-result p,
+    .video-entry p,
+    .conclusion p {
+        width: 100%;
+    }
 }
